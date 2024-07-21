@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Raleway";
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.sidebar-menu {
+    list-style: none;
+    text-decoration: none;
+    margin-top: 25px;
+}
+.sidebar {
+    width: 220px;
+    height: 100%;
+    position: fixed;
+    background-color: rgb(137, 185, 208);
+}
+
+.sidebar-brand {
+    /* height: 80px; */
+    padding: 15px 0px 0px 15px;
+}
+
+.sidebar-brand a {
+    color: white;
+}
+.sidebar-menu a {
+    display: block;
+    color: white;
+}
+
+.sidebar-menu ul {
+    padding-left: 15px;
+}
+
+.sidebar-menu li {
+    padding: 17px 0px 0px 0px;
+    margin-left: 5px;
+    list-style: none;
+    font-size: 17px;
+}
+
+.sidebar-menu li a:not(.active):hover {
+    color: rgb(2, 90, 131);
+}
+
+.sidebar-menu span {
+    padding-left: 12px;
+}
+.sidebar-menu a.active {
+    width: 160px;
+    background: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: rgb(137, 185, 208);
+    border-radius: 30px;
+}
+.main-content {
+    margin-left: 320px;
+    padding: 0px;
+}
+
+.section-content {
+    margin-left: 230px;
+    padding-top: 100px;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    z-index: 999;
+    background-color: white;
+    left: 220px;
+    justify-content: space-between;
+    padding: 15px;
+    width: 100%;
+    box-shadow: 2px 2px 5px rgba(12, 8, 36, 0.1);
+}
+header label {
+    padding-right: 10px;
+}
+.custom-tooltip {
+    display: none;
+}
+@media (max-width: 850px) {
+    .sidebar-brand {
+        display: none;
+    }
+    .sidebar-menu ul {
+        padding-left: 11px;
+    }
+    .sidebar-menu span:last-child {
+        display: none;
+    }
+    .sidebar {
+        width: 75px;
+    }
+    .main-content {
+        margin-left: 70px;
+    }
+    .main-content header {
+        width: calc(100% -70px);
+        left: 75px;
+    }
+    .section-content {
+        margin-left: 90px;
+        padding-top: 100px;
+    }
+    .sidebar-menu a.active {
+        width: 40px;
+    }
+    .custom-tooltip {
+        display: inline;
+        --bs-tooltip-bg: rgb(137, 185, 208);
+        --bs-tooltip-color: white;
+    }
+}
+
+.success-message {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    /* width: 20%; */
+    z-index: 999;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+.error-message {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    /* width: 20%; */
+    z-index: 999;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+}
+.action-btns {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
